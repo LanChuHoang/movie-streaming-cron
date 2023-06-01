@@ -5,6 +5,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CronModule } from './cron/cron.module';
+import { SharedModule } from './shared/shared.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { CronModule } from './cron/cron.module';
     }),
     CronModule,
     ScheduleModule.forRoot(),
+    SharedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
